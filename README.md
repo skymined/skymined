@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Welcome!%20I'm%20SKY:>)
+<!-- ![header](https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Welcome!%20I'm%20SKY:>) -->
 ### 폼생폼사 감사결남
 
 ## USING TECH
