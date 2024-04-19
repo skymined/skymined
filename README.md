@@ -4,6 +4,7 @@
 ## I'm
 <img src="https://img.shields.io/badge/developers-%23EA7100.svg?&style=for-the-badge&logo=developers&logoColor=white" /> <img src="https://img.shields.io/badge/data%20analyst-%2343A047.svg?&style=for-the-badge&logo=data%20analyst&logoColor=white" />
 <img src="https://img.shields.io/badge/writer-%23FF5722.svg?&style=for-the-badge&logo=writer&logoColor=white" />
+<img src="https://img.shields.io/badge/engineer-%230097C2.svg?&style=for-the-badge&logo=engineer-&logoColor=white" />
 
 ## What I Can Do
 
