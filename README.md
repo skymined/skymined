@@ -1,5 +1,11 @@
 <!-- ![header](https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Welcome!%20I'm%20SKY:>) -->
+
 # ✨폼생폼사 감사결남✨
+
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/badge?name=NueLi's-Velog)](https://velog.io/@eungyeole) 
+<br>
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=adsky0309)](https://github.com/eungyeole/velog-readme-stats)
+
 
 ## I'm
 <img src="https://img.shields.io/badge/developers-%23EA7100.svg?&style=for-the-badge&logo=developers&logoColor=white" /> <img src="https://img.shields.io/badge/data%20analyst-%2343A047.svg?&style=for-the-badge&logo=data%20analyst&logoColor=white" />
