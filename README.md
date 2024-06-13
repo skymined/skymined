@@ -2,6 +2,8 @@
 
 # ✨폼생폼사 감사결남✨
 
+**기술 블로그**
+<br>
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/badge?name=NueLi's-Velog)](https://velog.io/@adsky0309) 
 
 
