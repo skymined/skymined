@@ -2,9 +2,7 @@
 
 # ✨폼생폼사 감사결남✨
 
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/badge?name=NueLi's-Velog)](https://velog.io/@eungyeole) 
-<br>
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=adsky0309)](https://velog.io/@adsky0309/posts)
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/badge?name=NueLi's-Velog)](https://velog.io/@adsky0309) 
 
 
 ## I'm
