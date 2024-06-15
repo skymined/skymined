@@ -1,6 +1,6 @@
 <!-- ![header](https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Welcome!%20I'm%20SKY:>) -->
 
-# ✨폼생폼사 감사결남✨
+## ✨데이터의 가치를 발견하자✨
 
 **기술 블로그**
 <br>
