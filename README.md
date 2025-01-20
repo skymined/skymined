@@ -5,6 +5,8 @@
 **기술 블로그**
 <br>
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/badge?name=NueLi's-Velog)](https://velog.io/@adsky0309) 
+<br>
+[Sky's project summary](https://mine-sky.notion.site/Sky-s-Project-39397402866244bab3acee38049db6aa?pvs=4)
 
 
 ## I'm
