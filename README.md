@@ -1,5 +1,8 @@
 <!-- ![header](https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Welcome!%20I'm%20SKY:>) -->
 
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=skymined&show_icons=true&theme=default)
+
+
 ## ✨Data Analyst & AI Engineer✨
 
 **기술 블로그**
