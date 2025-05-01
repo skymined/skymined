@@ -2,9 +2,6 @@
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=skymined&show_icons=true&theme=default)
 
-
-## ✨Data Analyst & AI Engineer✨
-
 **기술 블로그**
 <br>
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/badge?name=NueLi's-Velog)](https://velog.io/@adsky0309) 
