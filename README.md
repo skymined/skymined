@@ -1,9 +1,14 @@
-<!-- ![header](https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Welcome!%20I'm%20SKY:>) -->
-
 ## Project
-<br> 매일 AI 뉴스를 날라주는 [IMEVERYDAY](https://skymined.github.io/everydaynews/)</br>
-<br> 5개의 키워드로 글을 작성하는 [IMWRITERI](https://skymined.github.io/imwriteri/)</br>
 
-**기술 블로그**
-<br>
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/badge?name=NueLi's-Velog)](https://velog.io/@adsky0309) 
+<br> 매일 AI 뉴스를 날라주는 <b>IMEVERYDAY</b></br>
+[![IMEVERYDAY](https://img.shields.io/badge/Visit-IMEVERYDAY-2F80ED?style=for-the-badge&logo=githubpages&logoColor=white)](https://skymined.github.io/everydaynews/)
+
+<br> 5개의 키워드로 글을 작성하는 <b>IMWRITERI</b></br>
+[![IMWRITERI](https://img.shields.io/badge/Visit-IMWRITERI-27AE60?style=for-the-badge&logo=markdown&logoColor=white)](https://skymined.github.io/imwriteri/)
+
+---
+
+## 기술 블로그
+
+<br> AI · 개발 · 기록을 정리하는 <b>Velog</b></br>
+[![Velog](https://img.shields.io/badge/Visit-NueLi's%20Velog-20C997?style=for-the-badge&logo=velog&logoColor=white)](https://velog.io/@adsky0309)
