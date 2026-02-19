@@ -1,5 +1,7 @@
 ## Project
 
+하고 싶을 때 해보는 그런 프로젝트들
+
 <br> 매일 AI 뉴스를 날라주는 <b>IMEVERYDAY</b></br>
 [![IMEVERYDAY](https://img.shields.io/badge/Visit-IMEVERYDAY-2F80ED?style=for-the-badge&logo=githubpages&logoColor=white)](https://skymined.github.io/everydaynews/)
 
