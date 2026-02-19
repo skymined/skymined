@@ -1,4 +1,4 @@
-## Project
+## AI Snacks Lab
 
 하고 싶을 때 해보는 그런 프로젝트들
 
