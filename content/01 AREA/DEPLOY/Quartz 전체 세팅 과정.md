@@ -143,3 +143,8 @@ git push
 
 
 ## BLOG 초기 꾸미기
+`quartz.config.ts`  파일에 들어가서 여러가지를 변경하면 됨
+
+- baseURL 변경: `baseUrl: "skymined.github.io`
+- 팔레트 변경: `darkmode`라고 되어 있는 곳에 팔레트를 바꾸려고 함. 나는 남색&노랑 계열을 좋아해서 변경함.
+- 

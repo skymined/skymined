@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "SKYWORLD",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "skymined.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -40,15 +40,15 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#0B1220",        // 배경(딥 네이비)
+          lightgray: "#121A2B",    // 카드/패널 배경
+          gray: "#2A3858",         // 테두리/구분선
+          darkgray: "#D6D9E0",     // 보조 텍스트
+          dark: "#F3F5F7",         // 본문 텍스트(거의 흰색)
+          secondary: "#F6C445",    // ✅ 포인트(노랑)
+          tertiary: "#8AB4F8",     // 링크/서브 포인트(블루 계열)
+          highlight: "rgba(246, 196, 69, 0.10)",  // hover/강조 배경
+          textHighlight: "#F6C44566",             // 텍스트 형광펜
         },
       },
     },
