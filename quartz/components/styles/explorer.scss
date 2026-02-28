@@ -30,7 +30,7 @@
 .explorer {
   display: flex;
   flex-direction: column;
-  overflow: visible;
+  overflow-y: hidden;
 
   min-height: 1.2rem;
   flex: 0 1 auto;
@@ -113,7 +113,8 @@ button.desktop-explorer {
 
 .explorer-content {
   list-style: none;
-  overflow: visible;
+  overflow: hidden;
+  overflow-y: auto;
   margin-top: 0.5rem;
 
   & ul {
@@ -122,9 +123,7 @@ button.desktop-explorer {
     padding: 0;
 
     &.explorer-ul {
-      overscroll-behavior: auto;
-      max-height: none;
-      overflow-y: visible;
+      overscroll-behavior: contain;
     }
 
     & li > a {
@@ -159,11 +158,6 @@ button.desktop-explorer {
     padding-left: 0.8rem;
     border-left: 1px solid var(--lightgray);
   }
-}
-
-.explorer-content:has(> .explorer-ul.overflow) {
-  max-height: none;
-  overflow-y: visible;
 }
 
 .folder-container {

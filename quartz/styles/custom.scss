@@ -77,3 +77,38 @@
 :root[saved-theme="dark"] .explorer-content .folder-outer > ul {
   border-left: 1px solid #6f5300 !important;
 }
+
+/* Desktop: make left Explorer flow with page height (no internal list scrollbar) */
+@media all and (min-width: 801px) {
+  .page > #quartz-body > .sidebar.left {
+    position: static;
+    height: auto;
+    overflow: visible;
+    align-self: start;
+  }
+
+  .page > #quartz-body > .sidebar.left .explorer {
+    overflow: visible;
+  }
+
+  .page > #quartz-body > .sidebar.left .explorer-content {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .page > #quartz-body > .sidebar.left .explorer-content:has(> .explorer-ul.overflow) {
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+
+  .page > #quartz-body > .sidebar.left .explorer-ul.overflow {
+    max-height: none !important;
+    overflow-y: visible !important;
+    mask-image: none !important;
+  }
+
+  .page > #quartz-body > .sidebar.left div:has(> .overflow) {
+    max-height: none;
+    overflow: visible;
+  }
+}
