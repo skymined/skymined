@@ -1,4 +1,4 @@
-#paper #architecture #EEG 
+#paper/EEG
 
 ## ABSTRACT
 EEG 신호를 이용한 감정 인식에서 성능을 향상시키기 위해 공간적, 스펙트럼적, 시간적 정보를 효과적으로 결합하는 방법, ACTNN(Attention-based Convolutional Tranformer Neural Network)이라는 새로운 신경망 구조를 제안한다.

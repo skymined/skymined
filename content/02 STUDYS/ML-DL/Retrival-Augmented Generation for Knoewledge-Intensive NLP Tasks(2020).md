@@ -1,4 +1,4 @@
-#paper #RAG
+#paper/RAG
 
 ![](https://velog.velcdn.com/images/adsky0309/post/37b89fd6-5582-40c7-b66d-bfb6980d7ec0/image.png)
 

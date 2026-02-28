@@ -1,4 +1,4 @@
-#paper #coding 
+#paper/DL #coding/DL 
 
 
 > #### '25 아키텍처 스터디 2주차
@@ -134,13 +134,13 @@
 - `t`: 소프트맥스 함수에서 로짓의 범위를 조절하는 학습 가능한 온도 파라미터
 
 
-- #extract feature representations of each modality : 각 modallity에서 특징 representation을 추출
+- extract feature representations of each modality : 각 modallity에서 특징 representation을 추출
     - `I_f = image_encoder(I) #[n, d_i]` : 이미지 인코더를 통해 이미지 특징 `I_f` 추출
     	- `n` : 배치크기, `d_t` : 텍스트 특징 차원
     - `T_f = text_encoder(T) #[n, d_t]` : 텍스트 인코더를 통해 텍스트 특징 `T_f` 추출
     	- `n` : 배치크기, `d_t` : 텍스트 특징 차원
 
-- #joint multimodal embedding [n, d_e] : 이미지와 텍스트를 joint multimodal 임베딩 공간으로 임베딩
+- joint multimodal embedding [n, d_e] : 이미지와 텍스트를 joint multimodal 임베딩 공간으로 임베딩
     - `I_e : l2_normalize(np.dot(I_f, W_i), axis=1)` : `I_f` : 이미지 특징을 `W_i` : 가중치 행렬로 투영한 후 L2 정규화 수행해서 이미지 임베딩을 얻음
     - `T_e : l2_normalize(np.dot(T_f, W_t), axis=1)`
 
@@ -160,7 +160,7 @@ logit(p)=log(\frac{p}{1-p}) $$
 - 온도 파라미터 t를 이용해 로짓의 스케일을 조정함으로써, 모델은 올바른 쌍을 더 잘 식별하고 잘못된 쌍을 더 잘 구별할 수 있음
 - 이후 로짓은 Softmax 함수의 입력으로 사용 -> 로짓 값을 확률 분포로 변환하여 각 클래스에 대한 확률을 얻을 수 있음
 
-- #symmetric loss function : 대칭 손실 함수
+- symmetric loss function : 대칭 손실 함수
     - `labels = np.arange(n)`  : 0부터 n-1까지 숫자를 담은 배열을 생성
     - `loss_i = cross_entropy_loss(logits, labels, axis=0)`
     	- `cross_entropy_loss` : 교차 엔트로피 손실 함수 계산. 두 확률 분포 간의 차이를 측정하는게 사용. 여기서는 예측된 유사도(logits)와 실제 레이블(labels) 간의 차이를 계산

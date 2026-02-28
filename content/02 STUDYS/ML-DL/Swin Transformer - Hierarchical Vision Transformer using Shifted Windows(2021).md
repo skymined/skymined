@@ -1,4 +1,4 @@
-#paper #DL
+#paper/DL
 
 >[paper_link](https://arxiv.org/abs/2103.14030), [github_code](https://github.com/microsoft/Swin-Transformer)
 

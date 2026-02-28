@@ -1,4 +1,4 @@
-#paper #coding 
+#paper/DL #coding/DL 
 
 > #### '25 아키텍처 스터디 1주차
 - vision transformer를 한 줄씩 해부해보자

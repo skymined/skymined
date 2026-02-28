@@ -1,4 +1,4 @@
-#paper #EEG #architecture
+#paper/EEG
 
 ## SUMMARY
 

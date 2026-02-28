@@ -1,4 +1,4 @@
-#paper 
+#paper/DL
 
 > '25 아키텍처 스터디 3주차
 - [paper link](https://arxiv.org/abs/2204.14198)

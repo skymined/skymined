@@ -1,8 +1,7 @@
-#paper #DL 
+#paper/DL
 
 
 # Abstract
-
 - text-based model과 speech proceeing을 통합한 Speech-LLaMA 방법을 소개한다
 - Speech-LLM 통합의 실용적인 요소들을 조사하였는데, 음향 특징의 압축이나 어탠션 마스크 선택, 파인튜닝 전략 등이다.
 - Decoder-only 아키텍쳐가 Encoder-Decoder보다 Speech-to-text task 에서경쟁적인 모습을 보였으며 parameter가 더 효율적임

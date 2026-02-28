@@ -6,6 +6,10 @@
     display: none !important;
   }
 
+  .explorer.collapsed {
+    flex: 0 1 auto !important;
+  }
+
   .explorer > .explorer-content {
     margin-top: 0;
   }
