@@ -1,6 +1,4 @@
-3 points 논문을 쓰기 전에 먼저 Unity 사용 방법을 배워봤다. Unity 필수죠...
-
-  
+3 points 논문을 쓰기 전에 먼저 Unity 사용 방법을 배워봤다. Unity 필수죠..
 
 [https://www.youtube.com/watch?v=rJE6bhVUNhk](https://www.youtube.com/watch?v=rJE6bhVUNhk "유니티로 5시간 만에 게임 만들기 무료 강의")
 
