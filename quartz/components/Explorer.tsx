@@ -30,21 +30,38 @@ const defaultOptions: Options = {
     return node
   },
   sortFn: (a, b) => {
-    // Sort order: folders first, then files. Sort folders and files alphabeticall
-    if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
-      // numeric: true: Whether numeric collation should be used, such that "1" < "2" < "10"
-      // sensitivity: "base": Only strings that differ in base letters compare as unequal. Examples: a ≠ b, a = á, a = A
-      return a.displayName.localeCompare(b.displayName, undefined, {
+    // Sort folders first. Keep folders alphabetic, sort files by newest date first.
+    const compareName = (x: FileTrieNode, y: FileTrieNode) =>
+      x.displayName.localeCompare(y.displayName, undefined, {
         numeric: true,
         sensitivity: "base",
       })
+
+    if (a.isFolder && b.isFolder) {
+      return compareName(a, b)
     }
 
-    if (!a.isFolder && b.isFolder) {
-      return 1
-    } else {
-      return -1
+    if (!a.isFolder && !b.isFolder) {
+      const getTimestamp = (node: FileTrieNode) => {
+        const rawDate = (node.data as { date?: string | Date } | null)?.date
+        if (!rawDate) return undefined
+        const timestamp = new Date(rawDate).getTime()
+        return Number.isNaN(timestamp) ? undefined : timestamp
+      }
+
+      const aTime = getTimestamp(a)
+      const bTime = getTimestamp(b)
+
+      if (aTime !== undefined && bTime !== undefined) {
+        return bTime - aTime
+      }
+
+      if (aTime !== undefined) return -1
+      if (bTime !== undefined) return 1
+      return compareName(a, b)
     }
+
+    return a.isFolder ? -1 : 1
   },
   filterFn: (node) => node.slugSegment !== "tags",
   order: ["filter", "map", "sort"],
@@ -163,3 +180,4 @@ export default ((userOpts?: Partial<Options>) => {
   Explorer.afterDOMLoaded = concatenateResources(script, overflowListAfterDOMLoaded)
   return Explorer
 }) satisfies QuartzComponentConstructor
+
