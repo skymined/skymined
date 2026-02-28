@@ -1,9 +1,4 @@
----
-tags:
-  - robotics
-type:
-  - research
----
+#research #robotics
 
 
 > 260128 버전  
