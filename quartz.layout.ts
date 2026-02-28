@@ -1,4 +1,4 @@
-import { PageLayout, SharedLayout } from "./quartz/cfg"
+﻿import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
 // components shared across all pages
@@ -27,6 +27,32 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
+    Component.ProfileCard({
+      // Put files under quartz/static/, then use /static/... URL here
+      imageSrc: "/static/pics/title1.jpg",
+      imageAlt: "Profile image",
+      bio: "I write archive-first notes and development logs.",
+      links: [
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/sky-kim-545b5a303/",
+          // iconSrc: "/static/social/linkedin.png",
+          // iconAlt: "LinkedIn",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/skymined",
+          // iconSrc: "/static/social/github.png",
+          // iconAlt: "GitHub",
+        },
+        {
+          label: "Mail",
+          href: "mailto:adsky0309@korea.ac.kr",
+          // iconSrc: "/static/social/mail.png",
+          // iconAlt: "Mail",
+        },
+      ],
+    }),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
@@ -38,7 +64,10 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      folderDefaultState: "collapsed",
+      useSavedState: true,
+    }),
   ],
   right: [
     Component.Graph(),
@@ -47,11 +76,36 @@ export const defaultContentPageLayout: PageLayout = {
   ],
 }
 
-// components for pages that display lists of pages  (e.g. tags or folders)
+// components for pages that display lists of pages (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
+    Component.ProfileCard({
+      imageSrc: "/static/pics/title1.jpg",
+      imageAlt: "Profile image",
+      bio: "I write archive-first notes and development logs.",
+      links: [
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/sky-kim-545b5a303/",
+          // iconSrc: "/static/social/linkedin.png",
+          // iconAlt: "LinkedIn",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/skymined",
+          // iconSrc: "/static/social/github.png",
+          // iconAlt: "GitHub",
+        },
+        {
+          label: "Mail",
+          href: "mailto:adsky0309@korea.ac.kr",
+          // iconSrc: "/static/social/mail.png",
+          // iconAlt: "Mail",
+        },
+      ],
+    }),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
@@ -62,7 +116,10 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      folderDefaultState: "collapsed",
+      useSavedState: true,
+    }),
   ],
   right: [],
 }

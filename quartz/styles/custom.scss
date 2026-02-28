@@ -1,9 +1,14 @@
 @use "./base.scss";
 
-// put your custom CSS here!
-/* Hide the "Explorer" header label, keep the folder tree */
-.explorer .explorer-header,
-.explorer summary,
-.explorer h3 {
-  display: none !important;
+/* Desktop: hide Explorer heading row and show tree immediately from root folders */
+@media all and (min-width: 801px) {
+  .explorer > .desktop-explorer {
+    display: none !important;
+  }
+
+  .explorer > .explorer-content {
+    margin-top: 0;
+  }
 }
+
+// put your custom CSS here!
