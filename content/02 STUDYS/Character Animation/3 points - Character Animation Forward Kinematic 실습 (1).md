@@ -1,3 +1,5 @@
+#coding #cg
+
 3Point 논문에 인볼브 되기 전 두 가지 일을 했다.
 
 첫 번째는 Forward Kinematic 실습이구요, 두 번째는 Unity를 이용한 게임 만들기.
