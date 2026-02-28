@@ -65,8 +65,8 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      folderDefaultState: "collapsed",
-      useSavedState: true,
+      folderDefaultState: "open",
+      useSavedState: false,
       filterFn: (node) => node.isFolder && node.slugSegment !== "tags",
     }),
   ],
@@ -118,8 +118,8 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      folderDefaultState: "collapsed",
-      useSavedState: true,
+      folderDefaultState: "open",
+      useSavedState: false,
       filterFn: (node) => node.isFolder && node.slugSegment !== "tags",
     }),
   ],
