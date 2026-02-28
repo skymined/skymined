@@ -142,6 +142,15 @@ function createFolderNode(
 
   if (!isCollapsed || folderIsPrefixOfCurrentSlug) {
     folderOuter.classList.add("open")
+
+    // Persist folders that were opened due current-path prefix,
+    // so they stay open when navigating to other branches.
+    if (folderIsPrefixOfCurrentSlug) {
+      const currentFolderState = currentExplorerState.find((item) => item.path === folderPath)
+      if (currentFolderState) {
+        currentFolderState.collapsed = false
+      }
+    }
   }
 
   for (const child of node.children) {
@@ -229,6 +238,10 @@ async function setupExplorer(currentSlug: FullSlug) {
       fragment.appendChild(node)
     }
     explorerUl.insertBefore(fragment, explorerUl.firstChild)
+
+    if (opts.useSavedState) {
+      localStorage.setItem("fileTree", JSON.stringify(currentExplorerState))
+    }
 
     // restore explorer scrollTop position if it exists
     const scrollTop = sessionStorage.getItem("explorerScrollTop")

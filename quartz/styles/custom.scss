@@ -51,10 +51,10 @@
 /* Explorer: nested folders use a lighter yellow than root folders */
 :root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > a,
 :root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > button span {
-  color: #d9b84f !important;
+  color: #bf9a33 !important;
 }
 
 :root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > a:hover,
 :root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > button:hover span {
-  color: #e6c768 !important;
+  color: #d2ae4a !important;
 }
