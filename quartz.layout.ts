@@ -1,5 +1,32 @@
-﻿import { PageLayout, SharedLayout } from "./quartz/cfg"
+import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+
+const profileCard = Component.ProfileCard({
+  // Put files under quartz/static/, then use /static/... URL here
+  imageSrc: "/static/pics/title1.jpg",
+  imageAlt: "Profile image",
+  bio: "I write archive-first notes and development logs.",
+  links: [
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/sky-kim-545b5a303/",
+      // iconSrc: "/static/social/linkedin.png",
+      // iconAlt: "LinkedIn",
+    },
+    {
+      label: "GitHub",
+      href: "https://github.com/skymined",
+      // iconSrc: "/static/social/github.png",
+      // iconAlt: "GitHub",
+    },
+    {
+      label: "Mail",
+      href: "mailto:adsky0309@korea.ac.kr",
+      // iconSrc: "/static/social/mail.png",
+      // iconAlt: "Mail",
+    },
+  ],
+})
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -21,38 +48,14 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
+    Component.MobileOnly(profileCard),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
-    Component.ProfileCard({
-      // Put files under quartz/static/, then use /static/... URL here
-      imageSrc: "/static/pics/title1.jpg",
-      imageAlt: "Profile image",
-      bio: "I write archive-first notes and development logs.",
-      links: [
-        {
-          label: "LinkedIn",
-          href: "https://www.linkedin.com/in/sky-kim-545b5a303/",
-          // iconSrc: "/static/social/linkedin.png",
-          // iconAlt: "LinkedIn",
-        },
-        {
-          label: "GitHub",
-          href: "https://github.com/skymined",
-          // iconSrc: "/static/social/github.png",
-          // iconAlt: "GitHub",
-        },
-        {
-          label: "Mail",
-          href: "mailto:adsky0309@korea.ac.kr",
-          // iconSrc: "/static/social/mail.png",
-          // iconAlt: "Mail",
-        },
-      ],
-    }),
+    Component.DesktopOnly(profileCard),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
@@ -79,34 +82,15 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    Component.Breadcrumbs(),
+    Component.MobileOnly(profileCard),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+  ],
   left: [
     Component.PageTitle(),
-    Component.ProfileCard({
-      imageSrc: "/static/pics/title1.jpg",
-      imageAlt: "Profile image",
-      bio: "I write archive-first notes and development logs.",
-      links: [
-        {
-          label: "LinkedIn",
-          href: "https://www.linkedin.com/in/sky-kim-545b5a303/",
-          // iconSrc: "/static/social/linkedin.png",
-          // iconAlt: "LinkedIn",
-        },
-        {
-          label: "GitHub",
-          href: "https://github.com/skymined",
-          // iconSrc: "/static/social/github.png",
-          // iconAlt: "GitHub",
-        },
-        {
-          label: "Mail",
-          href: "mailto:adsky0309@korea.ac.kr",
-          // iconSrc: "/static/social/mail.png",
-          // iconAlt: "Mail",
-        },
-      ],
-    }),
+    Component.DesktopOnly(profileCard),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [

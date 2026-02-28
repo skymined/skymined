@@ -1,5 +1,10 @@
 @use "./base.scss";
 
+/* Prevent viewport width quirks that cause horizontal clipping on mobile browsers. */
+html {
+  width: 100%;
+}
+
 /* Desktop: hide Explorer heading row and show tree immediately from root folders */
 @media all and (min-width: 801px) {
   .explorer > .desktop-explorer {
@@ -8,6 +13,23 @@
 
   .explorer > .explorer-content {
     margin-top: 0;
+  }
+
+  /* Left sidebar: disable viewport-locked scrolling and let explorer grow with page height. */
+  .page > #quartz-body .sidebar.left {
+    position: static;
+    height: auto;
+    align-self: start;
+    overflow: visible;
+  }
+
+  .page > #quartz-body .sidebar.left .explorer {
+    overflow: visible;
+  }
+
+  .page > #quartz-body .sidebar.left .explorer-content {
+    overflow: visible;
+    max-height: none;
   }
 }
 
@@ -76,4 +98,66 @@
 /* Explorer: nested tree connector line */
 :root[saved-theme="dark"] .explorer-content .folder-outer > ul {
   border-left: 1px solid #6f5300 !important;
+}
+
+/* Keep tablet layout readable by shrinking the left rail on medium screens. */
+@media all and (min-width: 801px) and (max-width: 1200px) {
+  .page > #quartz-body {
+    grid-template-columns: minmax(240px, 30vw) minmax(0, 1fr);
+  }
+}
+
+/* Mobile/small-tablet hardening: avoid horizontal overflow and cramped top controls. */
+@media all and (max-width: 800px) {
+  .page > #quartz-body {
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding: 0 0.9rem;
+    row-gap: 0.8rem;
+  }
+
+  .page > #quartz-body .sidebar.left {
+    width: 100%;
+    gap: 0.6rem;
+    justify-content: flex-start;
+    padding-top: 1rem;
+  }
+
+  .page > #quartz-body .sidebar.left > * {
+    min-width: 0;
+  }
+
+  .page > #quartz-body .sidebar.left .search {
+    min-width: 0;
+    max-width: 11.5rem;
+    flex: 1 1 8rem;
+  }
+
+  .page > #quartz-body .sidebar.left .search > .search-button {
+    padding-right: 0.5rem;
+  }
+
+  .page > #quartz-body .sidebar.left .search > .search-button > p {
+    display: none;
+  }
+
+  .page > #quartz-body .center,
+  .page > #quartz-body .center > article,
+  .page > #quartz-body .center .page-header,
+  .page > #quartz-body .center .page-footer {
+    min-width: 0;
+  }
+
+  article > h1,
+  article > h2,
+  article > h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .mobile-only.profile-card {
+    margin-top: 0.4rem;
+  }
+
+  .mobile-only.profile-card .profile-image {
+    max-height: 320px;
+  }
 }
