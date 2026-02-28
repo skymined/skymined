@@ -11,4 +11,50 @@
   }
 }
 
-// put your custom CSS here!
+/* Folder/list page title links: use white in dark mode instead of yellow accent */
+:root[saved-theme="dark"] .page-listing .section .desc > h3 > a,
+:root[saved-theme="dark"] li.section-li > .section > .desc > h3 > a {
+  color: #f5f7ff !important;
+}
+
+:root[saved-theme="dark"] .page-listing .section .desc > h3 > a:hover,
+:root[saved-theme="dark"] li.section-li > .section > .desc > h3 > a:hover {
+  color: #ffffff !important;
+}
+
+/* Breadcrumbs: yellow */
+.breadcrumb-container .breadcrumb-element > a {
+  color: var(--secondary) !important;
+}
+
+.breadcrumb-container .breadcrumb-element > a:hover {
+  color: #ffe08a !important;
+}
+
+.breadcrumb-container .breadcrumb-element > p {
+  color: var(--secondary);
+}
+
+/* Explorer spacing */
+.explorer-content .explorer-ul > li {
+  margin: 0.3rem 0;
+}
+
+.explorer-content .folder-outer > ul > li {
+  margin: 0.24rem 0;
+}
+
+.folder-container {
+  padding: 0.08rem 0;
+}
+
+/* Explorer: nested folders use a lighter yellow than root folders */
+:root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > a,
+:root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > button span {
+  color: #d9b84f !important;
+}
+
+:root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > a:hover,
+:root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > button:hover span {
+  color: #e6c768 !important;
+}

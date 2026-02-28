@@ -206,6 +206,16 @@ async function setupExplorer(currentSlug: FullSlug) {
       }
     })
 
+    // Keep the first root folder open on initial render.
+    // Other folders follow saved/default collapsed state.
+    const firstRootFolder = trie.children.find((node) => node.isFolder)
+    if (firstRootFolder) {
+      const firstRootState = currentExplorerState.find((entry) => entry.path === firstRootFolder.slug)
+      if (firstRootState) {
+        firstRootState.collapsed = false
+      }
+    }
+
     const explorerUl = explorer.querySelector(".explorer-ul")
     if (!explorerUl) continue
 

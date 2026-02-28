@@ -67,6 +67,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       folderDefaultState: "collapsed",
       useSavedState: true,
+      filterFn: (node) => node.isFolder && node.slugSegment !== "tags",
     }),
   ],
   right: [
@@ -119,6 +120,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       folderDefaultState: "collapsed",
       useSavedState: true,
+      filterFn: (node) => node.isFolder && node.slugSegment !== "tags",
     }),
   ],
   right: [],

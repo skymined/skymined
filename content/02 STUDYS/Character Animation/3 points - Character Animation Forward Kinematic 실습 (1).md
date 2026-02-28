@@ -29,7 +29,7 @@
 
 해당 방식으로 데이터를 뽑아보았다.
 
-```bass
+```python
 joint_hierarchy                    shape: (52,)
 joint_global_position              shape: (2751, 52, 3)
 ```
@@ -52,7 +52,7 @@ joint_global_position              shape: (2751, 52, 3)
 
 여기서부터는 이제 계산을 해야 합니다. 
 
-[##_Image|kage@bwdykn/dJMcabiG0qn/AAAAAAAAAAAAAAAAAAAAAPPR1bUXH2BJdwKEUEBtP6sKiWCZ0HtcUjL9KQuqXKZ9/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires=1772290799&amp;allow_ip=&amp;allow_referer=&amp;signature=OZcEITnrU56TlIH%2F2w8Domm2ZJs%3D|CDM|1.3|{"originWidth":2294,"originHeight":228,"style":"alignCenter"}_##]
+![[Pasted image 20260228181554.png]]
 
 #### 데이터 뜯어보기
 
@@ -60,7 +60,7 @@ joint_global_position              shape: (2751, 52, 3)
 
 먼저 상위 구조부터 보자.
 
-```
+```python
 a = data['joint_hierarchy']
 print(a.shape)
 print(a)
@@ -76,7 +76,7 @@ print(a)
 
 그 다음은 `joint_tpose_global_position` 차례.
 
-```
+```python
 >>>
 
 (52, 3)
@@ -95,7 +95,7 @@ print(a)
 
 `root_position`
 
-```
+```python
 >>>
 (4839, 3)
 [[1.13945566 1.63128461 0.98450536]
@@ -111,7 +111,7 @@ parent\[j\]=-1 이었던 관절이 4839 각 프레임마다 어느 좌표에 있
 
 마지막으로 `joint_local_rotaton`
 
-```
+```python
 >>>
 (4839, 52, 3)
 [[[-102.03730645   61.15115905  -97.67397728]
@@ -126,7 +126,7 @@ parent\[j\]=-1 이었던 관절이 4839 각 프레임마다 어느 좌표에 있
 
 프레임별로 생각하면 머리가 터질 것 같아서 일단 다음 프레임의 모션을 구해보기로 했다.
 
-```
+```python
 joint_tpose_global_position[0]
 = [-0.0026, -0.2354, 0.0164]
 ```
@@ -138,13 +138,13 @@ offset을 만들 때는 root의 위치가 사라지긴 하지만 회전의 기�
 
 그러므로 T-pose 전체를 root 기준으로 한 번 정렬한다.
 
-```
+```python
 root_tpose = joint_tpose_global_position[0]
 ```
 
 이제 rotation 값을 구해야 하는데.....
 
-```
+```python
 joint_local_rotation[0,0]
 = [-102.03730645   61.15115905  -97.67397728] # [z,x,y]
 ```
@@ -152,13 +152,13 @@ joint_local_rotation[0,0]
 -   요 말은 z 축으로 -102도, x축으로 61도, y축으로 -97도 회전했다는 뜻
 -   이 3번의 회전을 하나의 회전 행렬 R로 합쳐야 한다.
 
-```
+```python
 R_local = Rz(z) @ Rx(x) @ Ry(y)
 ```
 
 그래서 회전 행렬 값을 return 해주는 함수를 만들었다.
 
-```
+```python
 # 축별로 회전 행렬을 3개 만들어보자
 def euler_zxy_deg_to_R(zxy_deg):
     # degree -%3E radian으로 바꾸기
@@ -192,7 +192,7 @@ def euler_zxy_deg_to_R(zxy_deg):
 
 그리고 실제 offset을 바로 돌릴 수 있는 회전 연산자 만들어 두기
 
-[##_Image|kage@crFUjU/dJMb99LVmht/AAAAAAAAAAAAAAAAAAAAAAxOizcQtZbHqrOFANOcdZgiLs94RIHuUqyU02X3tecc/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires=1772290799&amp;allow_ip=&amp;allow_referer=&amp;signature=D%2BmjI4TAYEnijXmq3QpPPvwDwHo%3D|CDM|1.3|{"originWidth":482,"originHeight":568,"style":"alignCenter","filename":"2번쨰 실패.gif"}_##]
+![[Pasted image 20260228181608.png]]
 
 이것은 내가 마지막에 Rz @ Rx @ Ry 라고 해서 나온 결과물. 
 
@@ -202,7 +202,7 @@ def euler_zxy_deg_to_R(zxy_deg):
 
 어느 부분이 문제인지 print를 찍어봤으나 숫자만 나오는...
 
-```
+```python
 joint_local_rotation_matrix = np.zeros((52,3,3))
     for j in range(52):
         joint_local_rotation_matrix[j] = euler_zxy_deg_to_R(joint_local_rotation[0,j])
@@ -222,7 +222,7 @@ FK 누적 규칙에 따라
 3.  root만 시작점이라 별도 
 4.  `joint_global_rotation_matrix = np.zeros((52, 3, 3)) joint_global_position = np.zeros((52, 3)) joint_global_rotation_matrix[0] = joint_local_rotation_matrix[0] joint_global_position[0] = root_position[0]`
 
-```
+```python
 for j in range(52):
 parent = joint_hierarchy[j]
 if parent == -1:
@@ -233,7 +233,7 @@ joint_global_rotation_matrix[j] = joint_global_rotation_matrix[parent] @ joint_l
 joint_global_position[j] = joint_global_position[parent] + joint_global_rotation_matrix[j] @ joint_offset[j]
 ```
 
-````
+````python
 offset 오차 있는지 확인
 ```python
 len_offset = np.linalg.norm(joint_offset[j])
@@ -243,7 +243,7 @@ print("world  length:", len_world)
 print("difference:", abs(len_offset - len_world))
 ````
 
-[##_Image|kage@bFXU6J/dJMcai2705r/AAAAAAAAAAAAAAAAAAAAAJNBGn3ofoeEtQKfTsjssDRjPRvhW8S_jDUfGPyFhBN9/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires=1772290799&amp;allow_ip=&amp;allow_referer=&amp;signature=a6T%2Fh%2FE86BYwLhW8HjCAodlW7ww%3D|CDM|1.3|{"originWidth":800,"originHeight":582,"style":"alignCenter","filename":"2번째.gif"}_##]
+![[Pasted image 20260228181627.png]]
 
 결과물이 나왔다!
 
