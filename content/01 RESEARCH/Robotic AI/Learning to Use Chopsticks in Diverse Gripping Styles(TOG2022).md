@@ -4,6 +4,8 @@ tags:
 type:
   - PAPER
 ---
+[[hand-object manipulation 연구를 분류해보자]]
+
 ![[Pasted image 20260228185449.png]]
 
 ## Brief
