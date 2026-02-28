@@ -1,5 +1,7 @@
 ---
 tags:
+  - idea
+  - imwriteri
 created: 2026-03-01 02:14
 ---
 ![](https://blog.kakaocdn.net/dna/bEWHJg/dJMcaaYwPPm/AAAAAAAAAAAAAAAAAAAAAHcA3CQqO4UcFJyz8xqMs_AdCCFMSxCTYvj05WjdFHLL/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1774969199&allow_ip=&allow_referer=&signature=PnQvtGJHOA2IJSZMsZu1FbFTkk4%3D)
