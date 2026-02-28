@@ -48,13 +48,32 @@
   padding: 0.08rem 0;
 }
 
-/* Explorer: nested folders use a lighter yellow than root folders */
+/* Explorer: nested folders/files use a noticeably darker yellow than root folders */
 :root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > a,
 :root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > button span {
-  color: #bf9a33 !important;
+  color: #9a7300 !important;
 }
 
 :root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > a:hover,
 :root[saved-theme="dark"] .explorer-content .folder-outer .folder-container div > button:hover span {
-  color: #d2ae4a !important;
+  color: #c39400 !important;
+}
+
+/* Explorer: nested folder chevron + nested file links */
+:root[saved-theme="dark"] .explorer-content .folder-outer .folder-icon {
+  color: #9a7300 !important;
+}
+
+:root[saved-theme="dark"] .explorer-content .folder-outer ul li > a {
+  color: #a37a00 !important;
+  opacity: 0.95 !important;
+}
+
+:root[saved-theme="dark"] .explorer-content .folder-outer ul li > a:hover {
+  color: #c39400 !important;
+}
+
+/* Explorer: nested tree connector line */
+:root[saved-theme="dark"] .explorer-content .folder-outer > ul {
+  border-left: 1px solid #6f5300 !important;
 }
