@@ -1,4 +1,9 @@
-#coding #cg
+---
+tags:
+  - coding
+  - CG
+created: 2026-03-01T14:32:00
+---
 
 3Point 논문에 인볼브 되기 전 두 가지 일을 했다.
 

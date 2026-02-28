@@ -1,5 +1,16 @@
 @use "./base.scss";
 
+/* Desktop: hide Explorer heading row and show tree immediately from root folders */
+@media all and (min-width: 801px) {
+  .explorer > .desktop-explorer {
+    display: none !important;
+  }
+
+  .explorer > .explorer-content {
+    margin-top: 0;
+  }
+}
+
 /* Folder/list page title links: use white in dark mode instead of yellow accent */
 :root[saved-theme="dark"] .page-listing .section .desc > h3 > a,
 :root[saved-theme="dark"] li.section-li > .section > .desc > h3 > a {
@@ -65,39 +76,4 @@
 /* Explorer: nested tree connector line */
 :root[saved-theme="dark"] .explorer-content .folder-outer > ul {
   border-left: 1px solid #6f5300 !important;
-}
-
-/* Keep sidebars visible even if reader mode is toggled */
-:root[reader-mode="on"] .sidebar.left,
-:root[reader-mode="on"] .sidebar.right {
-  opacity: 1 !important;
-}
-
-/* Desktop: keep sidebar visible and let Explorer list grow with page (no internal scroll) */
-@media all and (min-width: 801px) {
-  .page > #quartz-body > .sidebar.left {
-    height: auto;
-    align-self: start;
-  }
-
-  .page > #quartz-body > .sidebar.left .explorer-content {
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  .page > #quartz-body > .sidebar.left .explorer-content:has(> .explorer-ul.overflow) {
-    max-height: none !important;
-    overflow-y: visible !important;
-  }
-
-  .page > #quartz-body > .sidebar.left .explorer-ul.overflow {
-    max-height: none !important;
-    overflow-y: visible !important;
-    mask-image: none !important;
-  }
-
-  .page > #quartz-body > .sidebar.left div:has(> .overflow) {
-    max-height: none;
-    overflow: visible;
-  }
 }

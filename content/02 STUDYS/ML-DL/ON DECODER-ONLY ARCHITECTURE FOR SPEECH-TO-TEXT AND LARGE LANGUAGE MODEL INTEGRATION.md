@@ -1,5 +1,8 @@
-#paper/DL
-
+---
+tags:
+  - paper/DL
+created: 2026-03-01T14:32:00
+---
 
 # Abstract
 - text-based model과 speech proceeing을 통합한 Speech-LLaMA 방법을 소개한다

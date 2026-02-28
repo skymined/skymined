@@ -1,4 +1,8 @@
-#paper/DL
+---
+tags:
+  - paper/DL
+created: 2026-03-01T14:32:00
+---
 
 > '25 아키텍처 스터디 3주차
 - [paper link](https://arxiv.org/abs/2204.14198)

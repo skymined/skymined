@@ -1,4 +1,9 @@
-#coding #unity
+---
+tags:
+  - coding
+  - unity
+created: 2026-03-01T14:32:00
+---
 
 3 points 논문을 쓰기 전에 먼저 Unity 사용 방법을 배워봤다. Unity 필수죠..
 

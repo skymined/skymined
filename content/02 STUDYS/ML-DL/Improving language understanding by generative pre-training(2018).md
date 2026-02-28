@@ -1,5 +1,8 @@
-#paper/DL
-
+---
+tags:
+  - paper/DL
+created: 2026-03-01T14:32:00
+---
 ![](https://velog.velcdn.com/images/adsky0309/post/983c2e4e-7a2f-4285-a053-d924de351cad/image.png)
 
 본 논문은 자연어 이해 태스크에서 강력한 성능을 달성하기 위해 생성 사전 학습과 판별 미세조정을 결합하는 프레임워크를 소개한다.

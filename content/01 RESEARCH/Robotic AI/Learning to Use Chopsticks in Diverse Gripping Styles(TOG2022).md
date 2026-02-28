@@ -1,4 +1,8 @@
-#paper #robotics
+---
+tags:
+  - paper/Robot
+created: 2026-03-01T14:32:00
+---
 
 [[hand-object manipulation 연구를 분류해보자]]
 

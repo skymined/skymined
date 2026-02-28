@@ -1,4 +1,8 @@
-#paper/DL
+---
+tags:
+  - paper/DL
+created: 2026-03-01T14:32:00
+---
 
 >[paper_link](https://arxiv.org/abs/2103.14030), [github_code](https://github.com/microsoft/Swin-Transformer)
 

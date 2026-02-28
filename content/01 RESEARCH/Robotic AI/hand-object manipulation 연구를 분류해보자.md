@@ -1,4 +1,8 @@
-#research #robotics
+---
+tags:
+  - research/robot
+created: 2026-03-01T14:32:00
+---
 
 > 260128 버전  
 > hand-object manipulation 연구를 시작하기 전에 던져진 질문들 중 몇 가지에 대한 대답 아카이빙

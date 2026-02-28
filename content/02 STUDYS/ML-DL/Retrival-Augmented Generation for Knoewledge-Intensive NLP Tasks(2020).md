@@ -1,4 +1,9 @@
-#paper/RAG
+---
+tags:
+  - paper/RAG
+created: 2026-03-01T14:32:00
+---
+
 
 ![](https://velog.velcdn.com/images/adsky0309/post/37b89fd6-5582-40c7-b66d-bfb6980d7ec0/image.png)
 

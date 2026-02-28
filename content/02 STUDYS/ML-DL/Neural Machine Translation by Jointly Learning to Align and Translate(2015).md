@@ -1,5 +1,8 @@
-#paper/DL
-
+---
+tags:
+  - paper/DL
+created: 2026-03-01T14:32:00
+---
 ![](https://velog.velcdn.com/images/adsky0309/post/1503ef19-603e-447d-9f76-d73355caff93/image.png)
 
 

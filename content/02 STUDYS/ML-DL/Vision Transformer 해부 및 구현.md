@@ -1,6 +1,9 @@
-
-
-#paper/DL #coding/DL 
+---
+tags:
+  - paper/DL
+  - coding/DL
+created: 2026-03-01T14:32:00
+---
 
 > #### '25 아키텍처 스터디 1주차
 - vision transformer를 한 줄씩 해부해보자
