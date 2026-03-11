@@ -1,7 +1,7 @@
 ## 기술 블로그
 
 <br> AI · 개발 · 기록을 정리하는 <b>블로그</b></br>
-[![Github Blog](https://img.shields.io/badge/Visit-NueLi's%20Blog-20C997?style=for-the-badge&logo=velog&logoColor=white)](https://skymined.github.io/)
+[![Github Blog](https://img.shields.io/badge/Visit-NueLi's%20Blog-20C997?style=for-the-badge&logo=velog&logoColor=white)](https://skymined.github.io/blog)
 
 ## AI Snacks Lab
 
